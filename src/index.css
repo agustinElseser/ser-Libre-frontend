@@ -1,0 +1,788 @@
+:root {
+  --color-background: rgb(38, 34, 34);
+  --color-font: rgb(61, 49, 50);
+  --color-font-dorado-dark: rgb(213, 173, 93);
+  --color-font-dorado-ligth: rgb(232, 196, 125);
+  --color-font-dorado-ligthing: rgb(252, 223, 161);
+  --background-gradient: linear-gradient(
+    50deg,
+    hsl(40deg 59% 60%) 0%,
+    hsl(40deg 62% 63%) 8%,
+    hsl(40deg 66% 67%) 15%,
+    hsl(40deg 70% 70%) 23%,
+    hsl(41deg 76% 74%) 31%,
+    hsl(41deg 83% 77%) 38%,
+    hsl(41deg 93% 81%) 46%,
+    hsl(41deg 93% 81%) 54%,
+    hsl(41deg 83% 77%) 62%,
+    hsl(41deg 76% 74%) 69%,
+    hsl(40deg 70% 70%) 77%,
+    hsl(40deg 66% 67%) 85%,
+    hsl(40deg 62% 63%) 92%,
+    hsl(40deg 59% 60%) 100%
+  );
+  --border-gradient: linear-gradient(
+    50deg,
+    hsl(40deg 59% 60%) 0%,
+    hsl(40deg 62% 63%) 8%,
+    hsl(40deg 66% 67%) 15%,
+    hsl(40deg 70% 70%) 23%,
+    hsl(41deg 76% 74%) 31%,
+    hsl(41deg 83% 77%) 38%,
+    hsl(41deg 93% 81%) 46%,
+    hsl(41deg 93% 81%) 54%,
+    hsl(41deg 83% 77%) 62%,
+    hsl(41deg 76% 74%) 69%,
+    hsl(40deg 70% 70%) 77%,
+    hsl(40deg 66% 67%) 85%,
+    hsl(40deg 62% 63%) 92%,
+    hsl(40deg 59% 60%) 100%
+  );
+  --background-corto: linear-gradient(
+    50deg,
+    hsl(40deg 59% 60%) 0%,
+    hsl(40deg 70% 70%) 16%,
+    hsl(41deg 76% 74%) 32%,
+    hsl(42, 63%, 87%) 50%,
+    hsl(41deg 76% 74%) 66%,
+    hsl(40deg 70% 70%) 82%,
+    hsl(40deg 59% 60%) 100%
+  );
+}
+
+body {
+  background-attachment: fixed;
+  background-position: -200px 00px;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-background);
+  gap: 15px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  position: fixed;
+  top: 10px;
+  padding: 0px;
+  border: 0px;
+  z-index: 99;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+  rotate: 360;
+  animation-duration: 5s;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.logo {
+  -webkit-animation: 6s rotate linear infinite;
+  animation: 6s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+.navAbajo {
+  z-index: 9;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  font-family: "The Sand Regular";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 900;
+  backdrop-filter: blur(0.1rem);
+  border-radius: 0px;
+  border-top: 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255, 0.5);
+  background-image: var(--background-gradient);
+  animation-duration: 1s;
+  transition: 1s;
+}
+
+.box {
+  width: 100%;
+}
+
+.basic-menu {
+  width: 500px !important;
+  background-color: black !important;
+}
+.menus {
+  width: 100%;
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  bottom: 50px;
+  backdrop-filter: blur(0.2rem);
+  border-radius: 0px;
+  background-color: rgb(255, 255, 255, 0.15);
+  z-index: 9;
+}
+.buttonNav {
+  width: 20px;
+  height: 20px;
+}
+.displayNone {
+  display: none;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(0.2rem);
+}
+.navflex {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font);
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 900;
+}
+.navItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 2.4rem;
+  margin-top: 0px;
+  font-family: "The Sand Bold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  color: var(--color-font);
+  border-top: 2px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255, 0.5);
+}
+
+@font-face {
+  font-family: "The Sand Regular";
+  src: url("./assets/The-Seasons-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "The Sand Light";
+  src: url("./assets/The-Seasons-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "The Sand Bold";
+  src: url("./assets/The-Seasons-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Angella-White";
+  src: url("./assets/Angella-White.woff") format("woff");
+}
+@font-face {
+  font-family: "AngellaWhite";
+  src: url("./assets/AngellaWhite.otf") format("otf");
+}
+
+.card {
+  width: 90%;
+  border-radius: 0px;
+  border: 3px;
+  border-style: solid;
+  border-color: var(--color-font-dorado-dark);
+  background-color: rgb(255, 255, 255, 0.3);
+  backdrop-filter: blur(0.18rem);
+  animation-duration: 800ms;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.text1 {
+  color: var(--color-font-dorado-dark);
+  font-size: 30px;
+}
+.buyNow {
+  display: flex;
+  width: 400px;
+  height: 40px;
+}
+.buttonBuy {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-image: var(--background-gradient);
+  color: var(--color-font);
+  font-size: 30px;
+  border-width: 2px;
+}
+.buttonBuyMov {
+  font-family: "The Sand Regular";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-image: var(--background-corto);
+  color: var(--color-font);
+  animation-duration: 1s 2s;
+  animation-delay: 1s 2s;
+  animation-iteration-count: 1 2;
+  border-image-slice: 1;
+  box-shadow: 6px 6px 12px #d5ac5b;
+  align-self: center;
+}
+
+.cardIcons {
+  height: 40px;
+  width: 40px;
+  color: var(--color-font-dorado-dark);
+}
+.icon {
+  width: 25px;
+  color: var(--color-font-dorado-dark);
+}
+.cardDescipcion {
+  font-family: "The Sand Regular";
+  font-size: 18px;
+  color: var(--color-font);
+  margin: 8px;
+}
+
+.navItem2 {
+  font-family: "The Sand Regular";
+  font-size: 14px;
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  width: 120px;
+  z-index: 999;
+}
+.containerVideo {
+  display: inline-block;
+  height: 100vh;
+}
+.video {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+h1 {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.span {
+  opacity: 0;
+  filter: blur(6px);
+}
+
+.span:nth-child(1) {
+  animation: fade-in 1s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.span:nth-child(2) {
+  animation: fade-in 1s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.title {
+  position: absolute;
+  margin-bottom: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.serLibre {
+  z-index: 99;
+}
+
+.lucianaElseser {
+  width: 240px;
+  height: 240px;
+}
+.spotify {
+  padding: 20px;
+}
+
+.boxDorada {
+  width: 100%;
+  min-height: 80px;
+  padding-left: 20%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--background-gradient);
+  color: var(--color-font);
+}
+.textoParrafos {
+  width: 85%;
+  font-size: 16px !important;
+  font-family: "The Sand Regular";
+  font-weight: 600;
+  text-align: justify;
+  color: var(--color-font-dorado-ligth);
+}
+
+h1 {
+  margin-top: 10px;
+  font-family: "The Sand Regular";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+h2 {
+  font-family: "The Sand Regular";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: "The Sand Regular";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-font);
+}
+
+h4 {
+  font-family: "The Sand Regular";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--color-font-dorado-dark);
+}
+
+ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: white;
+  padding: 10px;
+  border-style: solid;
+  border-width: 2px;
+  width: 85%;
+  background-color: rgb(255, 255, 255, 0.4);
+  border-image-source: var(--background-gradient);
+  color: var(--color-font-dorado-ligthing);
+  border-image-slice: 1;
+  box-shadow: 6px 6px 12px #d5ac5b;
+  background-color: rgb(254, 254, 254, 0.1);
+}
+
+.center {
+  margin: auto;
+}
+.corazon {
+  width: 15px;
+  display: inline;
+  margin-right: 5px;
+}
+li {
+  text-align: justify;
+  color: var(--color-font-dorado-ligthing);
+  font-family: "The Sand Regular";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 10px;
+  hyphens: auto;
+}
+.fooder {
+  width: 100%;
+  padding: 7.5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  background-image: var(--background-gradient);
+}
+
+.ventanaEmergente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.ventanaEmergente img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+.salir {
+  background: var(--background-corto);
+  align-self: flex-end;
+  padding: 1px;
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-font);
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  margin-top: 10px;
+
+  z-index: 9999;
+}
+
+.sectionBuy {
+  width: 85%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.buyOptions {
+  font-family: "The Sand Regular";
+  font-size: 18px;
+  width: 100%;
+  padding: 20px;
+  color: var(--color-font-dorado-ligthing);
+  background-color: var(--color-font);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  padding-left: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-image-source: var(--border-gradient);
+  border-image-slice: 1;
+}
+.buyOptions p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.buyOptions h2 {
+  margin-right: 10px;
+}
+
+.back {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f8f8f8' fill-opacity='0.25' fill-rule='evenodd'%3E%3Cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3E%3C/g%3E%3C/svg%3E"),
+    var(--background-corto);
+  animation-duration: 1s;
+  color: var(--color-font);
+  font-weight: 900;
+}
+.animation {
+  animation-duration: 2s;
+}
+
+.animation2 {
+  animation-duration: 4s;
+  animation-delay: 2ms;
+  animation-iteration-count: 1;
+}
+.delay {
+  animation-delay: 700ms;
+}
+.diseable {
+  filter: grayscale(1);
+}
+.none {
+  opacity: 0;
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(0.2rem);
+  align-items: center;
+  border-style: solid;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.input {
+  gap: 10px;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  box-shadow: inset 5px 5px 10px rgb(44, 33, 35);
+  font-family: "The Sand Regular";
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--color-font);
+}
+.change {
+  background-color: rgb(228, 228, 228);
+}
+.input:focus {
+  border: none;
+  outline: none;
+  color: var(--color-font);
+  background-color: white;
+
+  box-shadow: inset 5px 5px 10px rgb(44, 33, 35), 12px 12px 70px #ffffff,
+    -12px -12px 70px #ffffff;
+}
+.input::placeholder {
+  color: var(--color-font);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 45%;
+}
+
+.boxvacia {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.button {
+  outline: none;
+  border: none;
+  padding: 15px;
+  background-color: var(--color-background);
+  box-shadow: 5px 5px 15px rgb(44, 33, 35);
+  font-size: medium;
+  font-weight: bold;
+  max-width: 200px;
+  color: var(--color-font-dorado-dark);
+}
+
+.button:hover {
+  background-color: white;
+  border: none;
+  outline: none;
+}
+.seguir {
+  display: flex;
+  flex-direction: column;
+}
+.iconRedesfooder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  color: var(--color-font);
+  font-family: "The Sand Regular";
+  font-size: 15px;
+  font-weight: 700;
+}
+.icon {
+  width: 23px;
+  color: var(--color-font);
+  margin-right: 10px;
+}
+h6 {
+  font-family: "The Sand Regular";
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--color-font);
+}
+.margin-top {
+  margin-top: 30px;
+}
+a {
+  border: none;
+  outline: none;
+}
+
+.suscripcion {
+  padding: 10px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--background-gradient);
+  box-shadow: 6px 6px 12px #d5ac5b;
+  gap: 10px;
+}
+
+.suscripcionItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+h5 {
+  width: 85%;
+  min-height: 50px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "The Sand Regular";
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-shadow: 3px 3px 7px #d5ac5b;
+  background-image: var(--background-gradient);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  border-width: 2px;
+  border-style: solid;
+  border-image-source: var(--background-gradient);
+  border-image-slice: 1;
+}
+
+hr {
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 6px #d5ac5b;
+  border-image-source: var(--background-gradient);
+  border-image-slice: 1;
+}
+.imgShadow {
+  width: 100%;
+  box-shadow: 10px 10px 15px #d5ac5b, -10px -10px 15px #d5ac5b;
+  border-bottom: 3px;
+  border-top: 3px;
+  border-style: solid;
+  border-image-source: var(--background-gradient);
+  border-image-slice: 1;
+}
+.carrusel {
+  width: 100%;
+}
+.carruselSep {
+  padding: 10px;
+}
+.carruselItem {
+  width: 100%;
+  border: 3px;
+  border-style: solid;
+  border-image-source: var(--background-gradient);
+  border-image-slice: 1;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 6px #d5ac5b;
+}
+.carruselItem img {
+  height: 230px;
+  object-fit: cover;
+}
+.cardBase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-image: var(--background-gradient);
+}
+h11 {
+  font-family: "The Sand Regular";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--color-font);
+}
+.buttonCarrusel {
+  outline: none;
+  border: none;
+  padding: 5px;
+  background-color: var(--color-background);
+  box-shadow: 5px 5px 15px rgb(44, 33, 35);
+  font-size: 10px;
+  font-weight: bold;
+  max-width: 200px;
+  color: var(--color-font-dorado-dark);
+}
+
+.buttonCarrusel:hover {
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+}
+
+.textAnimation {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.w-full {
+  width: 100%;
+
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

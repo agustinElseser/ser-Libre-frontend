@@ -1,0 +1,77 @@
+{
+  "1": {
+    "id": "1",
+    "titulo": "Membresía Ser Libre",
+    "subtitulo": "11 encuentros en directo",
+    "boton": "FINALIZAR COMPRA",
+    "optionsBuy": [
+      {
+        "name": "buyArs1",
+        "valor": 3000,
+        "moneda": "ARS",
+        "descripcion": "por mes",
+        "id": 1,
+        "link": "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380848616128a018621b0a7c3089e"
+      },
+      {
+        "name": "buyArs2",
+        "valor": 3000,
+        "moneda": "ARS",
+        "descripcion": "transferencia bancaria",
+        "id": 2,
+        "link": "ser.libre.lu"
+      },
+      {
+        "name": "buyUsd1",
+        "valor": 10,
+        "moneda": "USD",
+        "descripcion": "por transferencia paypal",
+        "id": 3,
+        "link": ""
+      },
+      {
+        "name": "buyUsd2",
+        "valor": 10,
+        "moneda": "USDT",
+        "descripcion": "por transferencia a Binance",
+        "id": 4,
+        "link": ""
+      }
+    ]
+  },
+  "2": {
+    "id": "2",
+    "titulo": "Sesiones 1 a 1",
+    "subtitulo": "",
+    "optionsBuy": {
+      "buyArs1": {
+        "valor": 6000,
+        "moneda": "ARS",
+        "descripcion": "en hasta tres pagos sin interes",
+        "id": 1,
+        "link": ""
+      },
+      "buyArs2": {
+        "valor": 3000,
+        "moneda": "ARS",
+        "descripcion": "transferencia bancaria",
+        "id": 2,
+        "link": "alias"
+      },
+      "buyUsd1": {
+        "valor": 10,
+        "moneda": "USD",
+        "descripcion": "por transferencia paypal",
+        "id": 3,
+        "link": ""
+      },
+      "buyUsd2": {
+        "valor": 10,
+        "moneda": "USDT",
+        "descripcion": "por transferencia a Binance",
+        "id": 4,
+        "link": ""
+      }
+    }
+  }
+}
